@@ -123,7 +123,7 @@ export default function OutputSection({ original, modified }: Props) {
         </div>
       </div>
 
-      {/* Word Counts */}
+      {/* Word counts */}
       <div className="absolute top-[800.21px] left-[96.21px] w-[228px] h-[16px] flex gap-[15px]">
         <span className="text-[#222] font-['Inter'] font-medium text-[13px] leading-[100%] w-[80px]h-[16px]">
           Common: <strong>{common}</strong>
