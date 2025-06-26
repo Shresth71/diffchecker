@@ -12,9 +12,9 @@ export default function RatingsReviews() {
         Ratings & Reviews
       </h2>
 
-      {/* Rating Section */}
-      <div className="mb-4">
-        <h3 className="text-[13px] font-medium text-[#222] mb-[10px] leading-[100%]">
+      {/*Rating Section */}
+      <div className="w-[1255px] h-[63px] mb-6">
+        <h3 className="text-[13px] font-medium text-[#222] mb-[10px] leading-[100%] w-[107px]h-[16px]">
           Rate this product
         </h3>
         <div className="flex items-center gap-[10px]">
@@ -37,9 +37,9 @@ export default function RatingsReviews() {
         </div>
       </div>
 
-      {/* Review Textarea */}
-      <div className="mb-4">
-        <h3 className="text-[13px] font-medium text-[#222] mb-[8px] leading-[100%]">
+      {/*Review Textarea */}
+      <div className="w-[1255.79px] h-[125px] mb-6">
+        <h3 className="text-[13px] font-medium text-[#222] mb-[8px] leading-[100%] w-[124px]h-[16px]">
           Review this product
         </h3>
         <textarea
