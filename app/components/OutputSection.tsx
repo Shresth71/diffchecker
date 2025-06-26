@@ -121,14 +121,14 @@ export default function OutputSection({ original, modified }: Props) {
             )}
           </div>
         </div>
-        <div className="absolute  top-[362px] w-[273px] h-[19px] flex gap-[15px]">
-          <span className="text-[#222] font-['Inter'] font-medium text-[16px] leading-[100%] w-[98px]h-[19px]">
+        <div className="absolute  top-[362px]  flex gap-[15px]">
+          <span className="text-[#222] font-['Inter'] font-medium text-[16px] leading-[100%] ">
             Common: <strong>{common}</strong>
           </span>
-          <span className="text-green-600 font-['Inter'] font-medium text-[16px] leading-[100%] w-[54px]h-[19px]">
+          <span className="text-green-600 font-['Inter'] font-medium text-[16px] leading-[100%]">
             New: <strong>{added}</strong>
           </span>
-          <span className="text-red-600 font-['Inter'] font-medium text-[16px] leading-[100%]w-[91px]h-[19px]">
+          <span className="text-red-600 font-['Inter'] font-medium text-[16px] leading-[100%]">
             Removed: <strong>{removed}</strong>
           </span>
         </div>
