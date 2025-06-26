@@ -92,13 +92,13 @@ export default function OutputSection({ original, modified }: Props) {
 
   return (
     <>
-      <div className="absolute top-[569.52px] left-[96.21px] w-[1254.67px] h-[253.69px] font-['Inter']">
+      <div className="absolute top-[707.52px] left-[96.21px] w-[1255px] h-[381px] font-['Inter']">
         {/* Labels */}
-        <div className="absolute top-0 left-0 w-[600px]">
-          <p className="text-[13px] font-medium leading-[20px]w-[76px]h-[20px] mb-1">
+        <div className="absolute top-0 left-0 w-[600.01px] h-[351px]">
+          <p className="text-[16px] font-semibold text-[#141f39] leading-[20px]w-[95px]h-[20px] mb-1">
             Original text
           </p>
-          <div className="w-[600px] h-[200px] border border-[#E5E5E5] overflow-y-auto font-mono text-[14px] rounded">
+          <div className="w-[600px] h-[320px] border border-[#E5E5E5] overflow-y-auto font-mono text-[14px] rounded">
             {highlightDiffText(
               original,
               { ...modCounts },
@@ -109,10 +109,10 @@ export default function OutputSection({ original, modified }: Props) {
         </div>
 
         <div className="absolute top-0 left-[654.67px] w-[600px]">
-          <p className="text-[13px] font-medium leading-[20px]w-[79px]h-[20px] mb-1">
+          <p className="text-[16px] font-semibold leading-[20px]w-[99px]h-[20px] mb-1">
             Modified text
           </p>
-          <div className="w-[600px] h-[200px] border border-[#E5E5E5] overflow-y-auto font-mono text-[14px] rounded">
+          <div className="w-[600.33px] h-[320px] border border-[#E5E5E5] overflow-y-auto font-mono text-[14px] rounded">
             {highlightDiffText(
               modified,
               { ...origCounts },
@@ -121,19 +121,17 @@ export default function OutputSection({ original, modified }: Props) {
             )}
           </div>
         </div>
-      </div>
-
-      {/* Word counts */}
-      <div className="absolute top-[800.21px] left-[96.21px] w-[228px] h-[16px] flex gap-[15px]">
-        <span className="text-[#222] font-['Inter'] font-medium text-[13px] leading-[100%] w-[80px]h-[16px]">
-          Common: <strong>{common}</strong>
-        </span>
-        <span className="text-green-600 font-['Inter'] font-medium text-[13px] leading-[100%] w-[44px]h-[16px]">
-          New: <strong>{added}</strong>
-        </span>
-        <span className="text-red-600 font-['Inter'] font-medium text-[13px] leading-[100%]w-[74px]h-[16px]">
-          Removed: <strong>{removed}</strong>
-        </span>
+        <div className="absolute  top-[362px] w-[273px] h-[19px] flex gap-[15px]">
+          <span className="text-[#222] font-['Inter'] font-medium text-[16px] leading-[100%] w-[98px]h-[19px]">
+            Common: <strong>{common}</strong>
+          </span>
+          <span className="text-green-600 font-['Inter'] font-medium text-[16px] leading-[100%] w-[54px]h-[19px]">
+            New: <strong>{added}</strong>
+          </span>
+          <span className="text-red-600 font-['Inter'] font-medium text-[16px] leading-[100%]w-[91px]h-[19px]">
+            Removed: <strong>{removed}</strong>
+          </span>
+        </div>
       </div>
     </>
   );

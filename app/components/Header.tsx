@@ -4,11 +4,11 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export default function Header() {
   return (
-    <header className="absolute top-0 left-0 w-[1440px] h-[60px] bg-white border-b border-[#E5E5E5]">
+    <header className="absolute top-0 left-0 w-[1440px] h-[60px] bg-white ">
       {/* Logo Section */}
-      <div className="absolute top-[13px] left-[25px] w-[169.2px] h-[31px] flex items-center gap-2">
-        <Image src="/logo.svg" alt="Logo" width={31} height={31} />
-        <span className="text-[30px] font-['Poppins'] font-normal leading-[100%]w-[132.2px]h-[22.64px]">
+      <div className="absolute top-[13px] left-[25px] w-[169.2px] h-[31px] flex items-center ">
+        <Image src="/logo.svg" alt="Logo" width={31} height={31} className="top-[13px] left-[25px]border-2 border-#07C994" />
+        <span className="text-[30px] font-['Poppins'] font-normal w-[132.2px]h-[22.64px]">
           dragdrop<span className="font-bold">do</span>
         </span>
       </div>
@@ -34,14 +34,14 @@ export default function Header() {
             />
             <span className="flex items-center gap-[4px]">
               {label}
-              <ChevronDownIcon className="w-5 h-5 text-[#222]" />
+              <ChevronDownIcon className="w-[20px] h-[20px] text-[#222]" />
             </span>
           </span>
         ))}
       </nav>
 
       {/* Pricing Button */}
-      <button className="absolute top-[8px] left-[1085px] w-[82px] h-[43px] border border-[#BFBFBF] text-[#222] text-[16px] font-normal rounded-[5px] px-[15px] py-[12px] leading-[100%] text-center">
+      <button className="absolute top-[8px] left-[1085px] w-[82px] h-[43px] border border-[#E5E5E5] text-[#222] text-[16px] font-normal rounded-[5px] px-[15px] py-[12px] leading-[100%] text-center">
         <span className="inline-block w-[52px] h-[19px]">Pricing</span>
       </button>
 

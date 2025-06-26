@@ -14,35 +14,54 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <main className="w-[1440px] mx-auto relative bg-white">
-        <div className="absolute top-[85.26px] left-[465px] w-[510px] h-[70px]">
-          <h1 className="font-['Plus_Jakarta_Sans'] font-semibold text-[26px] leading-[140%] text-center tracking-[0] w-[158px] h-[36px] absolute top-0 left-[176px]">
+
+      {/* Main container */}
+      <div className="relative w-full">
+        {/* Heading with custom yellow highlight on first letter */}
+        <div className="absolute top-[117.58px] left-[614.27px]">
+          <h1 className="font-['Plus_Jakarta_Sans'] font-semibold text-[35px] leading-[140%] relative inline-block">
+            {/* Custom yellow highlight rectangle */}
+            <span 
+              className="absolute"
+              style={{
+                width: '132.17px',
+                height: '20px',
+                backgroundColor: '#FCD60B',
+                top: '50%',
+                left: '0',
+                transform: 'translateY(-50%)',
+                zIndex: -1
+              }}
+            />
             Diff Checker
           </h1>
-          <p className="font-['Inter'] font-normal text-[20px] leading-[30px] tracking-[0] text-center w-[510px] h-[30px] absolute top-[40px] left-0">
+        </div>
+
+        {/* Rest of your content remains unchanged */}
+        <div className="absolute top-[152.58px] left-[465px] w-[550px]">
+          <p className="font-['Inter'] font-normal text-[20px] leading-[30px] text-center">
             This tool will help you compare text, files, and images.
           </p>
         </div>
-        <InputSection
-          original={original}
-          modified={modified}
-          setOriginal={setOriginal}
-          setModified={setModified}
-          canCompare={!!canCompare}
-          onCompare={() => setShowDiff(true)}
-        />
-        
-        {showDiff && canCompare && (
-          <>
-            <OutputSection original={original} modified={modified} />
-            <div className="absolute bg-white  top-[840.91px] left-[76.21px] w-[1255.79px] h-[309px]">
-              {" "}
 
-              <RatingsReviews />
-            </div>
-          </>
-        )}
-      </main>
+        
+          <InputSection
+            original={original}
+            modified={modified}
+            setOriginal={setOriginal}
+            setModified={setModified}
+            canCompare={!!canCompare}
+            onCompare={() => setShowDiff(true)}
+          />
+        
+      </div>
+
+      {showDiff && canCompare && (
+        <>
+          <OutputSection original={original} modified={modified} />
+          <RatingsReviews />
+        </>
+      )}
     </>
   );
 }
