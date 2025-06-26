@@ -7,14 +7,10 @@ function getWordDiffStats(original: string, modified: string) {
   // Normalize text: lowercase, remove punctuation, filter empty strings
   const normalize = (text: string) =>
     text
-      .normalize("NFKD")
       .toLowerCase()
-      .replace(/[“”‘’]/g, '"')
-      .replace(/[\p{P}\p{S}]/gu, "")
-      .replace(/\s+/g, "")
-      .trim()
-      .split("")
-      .filter(Boolean);
+      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
+      .split(/\s+/)
+      .filter((word) => word.length > 0);
 
   const origWords = normalize(original);
   const modWords = normalize(modified);
