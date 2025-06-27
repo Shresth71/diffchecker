@@ -27,7 +27,7 @@ export default function InputSection({
           </div>
           <textarea
             className="text-sm p-3 resize-none overflow-y-auto overflow-x-hidden focus:outline-none 
-                   w-[600px] h-[320px] border border-[#E5E5E5]"
+                   w-[600px] h-[320px] border border-[#E5E5E5]  bg-white bg-none"
             value={original}
             onChange={(e) => setOriginal(e.target.value)}
           />
@@ -42,7 +42,7 @@ export default function InputSection({
           </div>
           <textarea
             className="text-sm p-3 resize-none overflow-y-auto overflow-x-hidden focus:outline-none 
-                   w-[600px] h-[320px] border border-[#E5E5E5]"
+                   w-[600px] h-[320px] border border-[#E5E5E5] bg-white bg-none "
             value={modified}
             onChange={(e) => setModified(e.target.value)}
           />

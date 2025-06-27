@@ -4,7 +4,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export default function Header() {
   return (
-    <header className="absolute top-0 left-0 w-[1440px] h-[60px] bg-white ">
+    <header className="absolute top-0 left-0 w-full h-[60px] bg-white ">
       {/* Logo Section */}
       <div className="absolute top-[13px] left-[25px] w-[169.2px] h-[31px] flex items-center ">
         <Image src="/logo.svg" alt="Logo" width={31} height={31} className="top-[13px] left-[25px]border-2 border-#07C994" />

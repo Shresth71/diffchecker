@@ -12,56 +12,62 @@ export default function HomePage() {
   const canCompare = original.trim() && modified.trim();
 
   return (
-    <>
-      <Header />
+    <div className="relative">
+      {/* Header */}
+      <Header className="relative z-30 w-[1440px] h-[60px]" />
 
-      {/* Main container */}
-      <div className="relative w-full">
-        {/* Heading with custom yellow highlight on first letter */}
+      {/* Background Layer */}
+      <div className="absolute top-[60px] left-0 w-full h-[607px] z-0">
+        <div className="absolute inset-0 bg-[url('/bg.jpg')] bg-no-repeat bg-center bg-cover" />
+        <div className="absolute inset-0 bg-white opacity-40" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-20">
+        
         <div className="absolute top-[117.58px] left-[614.27px]">
           <h1 className="font-['Plus_Jakarta_Sans'] font-semibold text-[35px] leading-[140%] relative inline-block">
-            {/* Custom yellow highlight rectangle */}
-            <span 
+            <span
               className="absolute"
               style={{
-                width: '132.17px',
-                height: '20px',
-                backgroundColor: '#FCD60B',
-                top: '50%',
-                left: '0',
-                transform: 'translateY(-50%)',
-                zIndex: -1
+                width: "132.17px",
+                height: "20px",
+                backgroundColor: "#FCD60B",
+                top: "50%",
+                left: "0",
+                transform: "translateY(-50%)",
+                zIndex: -1,
               }}
             />
             Diff Checker
           </h1>
         </div>
 
-        {/* Rest of your content remains unchanged */}
-        <div className="absolute top-[152.58px] left-[465px] w-[550px]">
+
+        <div className="absolute top-[162.58px] left-[465px] w-[550px]">
           <p className="font-['Inter'] font-normal text-[20px] leading-[30px] text-center">
             This tool will help you compare text, files, and images.
           </p>
         </div>
 
-        
-          <InputSection
-            original={original}
-            modified={modified}
-            setOriginal={setOriginal}
-            setModified={setModified}
-            canCompare={!!canCompare}
-            onCompare={() => setShowDiff(true)}
-          />
-        
+        {/* Input Section */}
+        <InputSection
+          original={original}
+          modified={modified}
+          setOriginal={setOriginal}
+          setModified={setModified}
+          canCompare={!!canCompare}
+          onCompare={() => setShowDiff(true)}
+        />
       </div>
 
+     
       {showDiff && canCompare && (
         <>
           <OutputSection original={original} modified={modified} />
           <RatingsReviews />
         </>
       )}
-    </>
+    </div>
   );
 }
